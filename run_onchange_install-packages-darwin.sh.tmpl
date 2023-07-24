@@ -3,23 +3,8 @@
 
 which brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-brew bundle --no-lock --file=/dev/stdin <<EOF
-brew "chezmoi"
-brew "fish"
-brew "mas"
-brew "rtx"
-
-cask "alacritty"
-cask "raycast"
-cask "zed"
-
-mas "Balance: Mindful time tracking", id: 1637311725
-mas "Fantastical - Calendar", id: 975937182
-mas "Things 3", id: 904280696
-
-tap "homebrew/cask-fonts"
-cask "font-iosevka"
-EOF
+# .Brewfile hash: {{ include "dot_Brewfile" | sha256sum }}
+brew bundle --no-lock --file=$HOME/.Brewfile
 
 FISH_PATH=$(which fish)
 if [ $SHELL != $FISH_PATH ]; then

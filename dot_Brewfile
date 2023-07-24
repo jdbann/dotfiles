@@ -1,0 +1,16 @@
+brew "chezmoi"
+brew "fish"
+brew "mas"
+brew "rtx"
+
+cask "alacritty"
+cask "raycast"
+cask "zed"
+
+mas "1Blocker - Ad Blocker", id: 1365531024
+mas "Balance: Mindful time tracking", id: 1637311725
+mas "Fantastical - Calendar", id: 975937182
+mas "Things 3", id: 904280696
+
+tap "homebrew/cask-fonts"
+cask "font-iosevka"
