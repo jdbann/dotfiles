@@ -4,9 +4,17 @@
 which brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
+brew "chezmoi"
+brew "fish"
 brew "rtx"
 
 cask "alacritty"
 cask "zed"
 EOF
+
+FISH_PATH=$(which fish)
+if [ $SHELL != $FISH_PATH ]; then
+    grep -qxF $FISH_PATH /etc/shells || sudo sh -c "echo $FISH_PATH >> /etc/shells"
+    chsh -s $FISH_PATH
+fi
 {{ end -}}
