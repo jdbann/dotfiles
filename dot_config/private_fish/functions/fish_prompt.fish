@@ -12,7 +12,7 @@ function fish_prompt -d "Write out the prompt"
 
     set -l prompt_status
     if test ! $last_status -eq 0
-    set prompt_status (set_color $fish_color_status) "✖ " (set_color normal)
+        set prompt_status (set_color $fish_color_status) "✖ " (set_color normal)
     end
 
     echo -n -s \n (prompt_pwd) (fish_vcs_prompt) \n $prompt_status "> "
