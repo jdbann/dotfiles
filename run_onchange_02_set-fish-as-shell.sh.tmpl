@@ -1,0 +1,9 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+FISH_PATH=$(which fish)
+if [ $SHELL != $FISH_PATH ]; then
+    grep -qxF $FISH_PATH /etc/shells || sudo sh -c "echo $FISH_PATH >> /etc/shells"
+    chsh -s $FISH_PATH
+fi
+{{ end -}}
