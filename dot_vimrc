@@ -1,0 +1,12 @@
+" Setup plugins
+source ~/.vim.plugins
+
+" Use 24-bit colors
+set termguicolors
+
+" Enable syntax highlighting
+syntax on
+
+" Set color scheme
+let g:onedark_terminal_italics=1
+colorscheme onedark
