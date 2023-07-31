@@ -1,22 +1,31 @@
 tap "encoredev/tap"
-
-brew "chezmoi"
-brew "encore"
-brew "fish"
-brew "fzf"
-brew "gh"
-brew "mas"
-brew "rtx"
-
-cask "alacritty"
-cask "orbstack"
-cask "raycast"
-cask "zed"
-
-mas "1Blocker - Ad Blocker", id: 1365531024
-mas "Balance: Mindful time tracking", id: 1637311725
-mas "Fantastical - Calendar", id: 975937182
-mas "Things 3", id: 904280696
-
+tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GitHub command-line tool
+brew "gh"
+# Mac App Store command-line interface
+brew "mas"
+# Polyglot runtime manager (asdf rust clone)
+brew "rtx"
+# The static analysis-powered Go framework for building backend applications
+brew "encoredev/tap/encore"
+# GPU-accelerated terminal emulator
+cask "alacritty"
+# Sans-serif, slab-serif, monospace and quasi‑proportional typeface family
 cask "font-iosevka"
+# Replacement for Docker Desktop
+cask "orbstack"
+# Control your tools with a few keystrokes
+cask "raycast"
+# Multiplayer code editor
+cask "zed"
+mas "1Blocker", id: 1365531024
+mas "Balance", id: 1637311725
+mas "Fantastical", id: 975937182
+mas "Things", id: 904280696
