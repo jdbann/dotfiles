@@ -1,4 +1,7 @@
+tap "encoredev/tap"
+
 brew "chezmoi"
+brew "encore"
 brew "fish"
 brew "fzf"
 brew "gh"
@@ -6,6 +9,7 @@ brew "mas"
 brew "rtx"
 
 cask "alacritty"
+cask "orbstack"
 cask "raycast"
 cask "zed"
 
