@@ -27,5 +27,6 @@ cask "raycast"
 cask "zed"
 mas "1Blocker", id: 1365531024
 mas "Balance", id: 1637311725
+mas "Craft", id: 1487937127
 mas "Fantastical", id: 975937182
 mas "Things", id: 904280696
