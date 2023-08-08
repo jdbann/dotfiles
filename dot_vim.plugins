@@ -3,5 +3,6 @@ Plug 'fatih/vim-go'
 Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 call plug#end()
