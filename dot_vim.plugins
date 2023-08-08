@@ -1,4 +1,6 @@
 call plug#begin()
 Plug 'joshdick/onedark.vim'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-sensible'
 call plug#end()
