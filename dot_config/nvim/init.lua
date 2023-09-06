@@ -14,7 +14,31 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugins
 require("lazy").setup({
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000, opts = { flavour = "macchiato" } },
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+    opts = {
+      flavour = "macchiato",
+      integrations = {
+        treesitter = true,
+      },
+    },
+  },
+
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function ()
+      require("nvim-treesitter.configs").setup({
+        ensure_installed = { "fish", "lua", "go", "javascript", "query", "typescript", "vim", "vimdoc" },
+	sync_install = false,
+        auto_install = false,
+	highlight = { enable = true },
+	indent = { enable = true },
+      })
+    end
+  },
 })
 
 -- Options
