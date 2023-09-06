@@ -21,6 +21,7 @@ require("lazy").setup({
     opts = {
       flavour = "macchiato",
       integrations = {
+        neogit = true,
         treesitter = true,
       },
     },
@@ -38,6 +39,17 @@ require("lazy").setup({
 	indent = { enable = true },
       })
     end
+  },
+
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = true,
+    opts = {
+      kind = "split",
+    },
   },
 })
 
