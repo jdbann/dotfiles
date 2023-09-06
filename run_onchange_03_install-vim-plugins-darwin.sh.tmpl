@@ -1,6 +1,0 @@
-{{- if eq .chezmoi.os "darwin" -}}
-#!/bin/bash
-
-# .vim.plugins hash: {{ include "dot_vim.plugins" | sha256sum }}
-vim -es -u ~/.vim.plugins -i NONE -c "PlugInstall" -c "qa"
-{{ end -}}
