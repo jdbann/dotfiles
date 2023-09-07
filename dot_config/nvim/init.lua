@@ -21,6 +21,7 @@ require("lazy").setup({
     opts = {
       flavour = "macchiato",
       integrations = {
+        gitsigns = true,
         neogit = true,
         treesitter = true,
       },
@@ -51,6 +52,11 @@ require("lazy").setup({
     opts = {
       kind = "split",
     },
+  },
+
+  {
+    "lewis6991/gitsigns.nvim",
+    config = true,
   },
 })
 
