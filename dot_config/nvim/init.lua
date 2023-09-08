@@ -65,4 +65,13 @@ vim.o.termguicolors = true
 vim.wo.number = true
 
 -- Keybindings
+vim.api.nvim_set_keymap("", "<space>", "<nop>", { noremap = true, silent = true })
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+vim.api.nvim_set_keymap("n", "<c-j>", "<c-w><c-j>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<c-k>", "<c-w><c-k>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<c-l>", "<c-w><c-l>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<c-h>", "<c-w><c-h>", { noremap = true, silent = true })
+
 vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>Neogit<cr>", { noremap = true, silent = true })
