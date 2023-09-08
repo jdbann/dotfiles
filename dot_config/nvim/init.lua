@@ -56,6 +56,13 @@ require("lazy").setup({
 
 -- Options
 vim.cmd.colorscheme "catppuccin"
+vim.g.splitbelow = true
+vim.g.splitright = true
+vim.o.background = "dark"
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.termguicolors = true
+vim.wo.number = true
 
 -- Keybindings
 vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>Neogit<cr>", { noremap = true, silent = true })
