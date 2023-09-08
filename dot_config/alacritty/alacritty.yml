@@ -7,6 +7,13 @@ window:
 font:
   normal:
     family: Iosevka
+    style: Extended
+  bold:
+    style: Bold Extended
+  italic:
+    style: Extended Italic
+  bold_italic:
+    style: Bold Extended Italic
   size: 12
 
 import:
