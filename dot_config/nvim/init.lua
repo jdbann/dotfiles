@@ -1,3 +1,5 @@
+require("lsp")
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -57,6 +59,10 @@ require("lazy").setup({
   {
     "lewis6991/gitsigns.nvim",
     config = true,
+  },
+
+  {
+    "neovim/nvim-lspconfig",
   },
 })
 
