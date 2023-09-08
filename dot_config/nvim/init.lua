@@ -45,6 +45,7 @@ require("lazy").setup({
     "NeogitOrg/neogit",
     dependencies = {
       "nvim-lua/plenary.nvim",
+      "sindrets/diffview.nvim",
     },
     config = true,
     opts = {
@@ -55,3 +56,6 @@ require("lazy").setup({
 
 -- Options
 vim.cmd.colorscheme "catppuccin"
+
+-- Keybindings
+vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>Neogit<cr>", { noremap = true, silent = true })
