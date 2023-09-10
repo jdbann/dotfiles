@@ -3,6 +3,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
+brew "fd"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
 # Command-line fuzzy finder written in Go
@@ -11,6 +12,7 @@ brew "fzf"
 brew "gh"
 # Mac App Store command-line interface
 brew "mas"
+brew "ripgrep"
 # Polyglot runtime manager (asdf rust clone)
 brew "rtx"
 # The static analysis-powered Go framework for building backend applications
