@@ -1,4 +1,3 @@
-require("lsp")
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -65,6 +64,8 @@ require("lazy").setup({
     "neovim/nvim-lspconfig",
   },
 })
+
+require("lsp")
 
 -- Options
 vim.cmd.colorscheme "catppuccin"
