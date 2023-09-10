@@ -1,3 +1,8 @@
+-- Keybindings
+-- Must set leader before initializing any plugins.
+vim.api.nvim_set_keymap("", "<space>", "<nop>", { noremap = true, silent = true })
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -24,6 +29,7 @@ require("lazy").setup({
       integrations = {
         gitsigns = true,
         neogit = true,
+        telescope = { enabled = true },
         treesitter = true,
       },
     },
@@ -49,9 +55,11 @@ require("lazy").setup({
       "nvim-lua/plenary.nvim",
       "sindrets/diffview.nvim",
     },
-    config = true,
     opts = {
       kind = "split",
+    },
+    keys = {
+      { "<leader>g", "<cmd>Neogit<cr>", mode = "n", desc = "Open Neogit" },
     },
   },
 
@@ -62,6 +70,31 @@ require("lazy").setup({
 
   {
     "neovim/nvim-lspconfig",
+  },
+
+  {
+    "FeiyouG/commander.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim" },
+    keys = {
+      { "<leader>c", "<cmd>Telescope commander<cr>", mode = "n", desc = "Open Commander" },
+    },
+    opts = {
+      components = {
+        "DESC",
+        "KEYS",
+        "CMD",
+      },
+      sort_by = {
+        "DESC",
+        "KEYS",
+        "CAT",
+        "CMD"
+      },
+      integration = {
+        telescope = { enable = true },
+        lazy = { enable = true },
+      }
+    },
   },
 })
 
@@ -77,14 +110,25 @@ vim.o.splitright = true
 vim.o.termguicolors = true
 vim.wo.number = true
 
--- Keybindings
-vim.api.nvim_set_keymap("", "<space>", "<nop>", { noremap = true, silent = true })
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
-vim.api.nvim_set_keymap("n", "<c-j>", "<c-w><c-j>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<c-k>", "<c-w><c-k>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<c-l>", "<c-w><c-l>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<c-h>", "<c-w><c-h>", { noremap = true, silent = true })
-
-vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>Neogit<cr>", { noremap = true, silent = true })
+require("commander").add({
+  {
+    desc = "Focus window below",
+    cmd = "<c-w><c-j>",
+    keys = { "n", "<c-j>" },
+  },
+  {
+    desc = "Focus window above",
+    cmd = "<c-w><c-k>",
+    keys = { "n", "<c-k>" },
+  },
+  {
+    desc = "Focus window left",
+    cmd = "<c-w><c-h>",
+    keys = { "n", "<c-h>" },
+  },
+  {
+    desc = "Focus window right",
+    cmd = "<c-w><c-l>",
+    keys = { "n", "<c-l>" },
+  },
+})
