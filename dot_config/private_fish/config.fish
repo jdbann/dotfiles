@@ -7,3 +7,7 @@ end
 
 # Setup rtx
 eval "$(rtx activate fish)"
+
+# Set default editors
+set -x VISUAL nvim
+set -x EDITOR $VISUAL
