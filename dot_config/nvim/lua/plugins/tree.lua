@@ -2,8 +2,18 @@ return {
   "nvim-tree/nvim-tree.lua",
   dependencies = { "nvim-tree/nvim-web-devicons" },
   keys = {
-    { "<leader>tt", "<cmd>NvimTreeFindFileToggle<cr>", desc = "Toggle file explorer" },
-    { "<leader>tf", "<cmd>NvimTreeFindFile<cr>", desc = "Open current file in file explorer" },
+    { "<leader>tt", "<cmd>NvimTreeFindFile<cr>", desc = "Open file explorer" },
+    { "<leader>tq", "<cmd>NvimTreeClose<cr>", desc = "Close file explorer" },
   },
-  opts = {},
+  opts = {
+    view = {
+      width = {
+        min = 30,
+        max = "20%",
+      },
+    },
+    renderer = {
+      full_name = true,
+    },
+  },
 }
