@@ -10,6 +10,7 @@ brew "fish"
 brew "fzf"
 # GitHub command-line tool
 brew "gh"
+brew "neovim"
 # Mac App Store command-line interface
 brew "mas"
 brew "ripgrep"
