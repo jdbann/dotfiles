@@ -9,6 +9,7 @@ return {
         cmp = true,
         gitsigns = true,
         neogit = true,
+        nvimtree = true,
         telescope = { enabled = true },
         treesitter = true,
         which_key = true,
