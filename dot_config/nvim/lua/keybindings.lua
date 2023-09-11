@@ -1,22 +1,9 @@
-require("commander").add({
-  {
-    desc = "Focus window below",
-    cmd = "<c-w><c-j>",
-    keys = { "n", "<c-j>" },
-  },
-  {
-    desc = "Focus window above",
-    cmd = "<c-w><c-k>",
-    keys = { "n", "<c-k>" },
-  },
-  {
-    desc = "Focus window left",
-    cmd = "<c-w><c-h>",
-    keys = { "n", "<c-h>" },
-  },
-  {
-    desc = "Focus window right",
-    cmd = "<c-w><c-l>",
-    keys = { "n", "<c-l>" },
-  },
+local wk = require("which-key")
+
+wk.register({
+  name = "window",
+  ["<c-j>"] = { "<c-w><c-j>", "Focus window below" },
+  ["<c-k>"] = { "<c-w><c-k>", "Focus window above" },
+  ["<c-h>"] = { "<c-w><c-h>", "Focus window left" },
+  ["<c-l>"] = { "<c-w><c-l>", "Focus window below" },
 })

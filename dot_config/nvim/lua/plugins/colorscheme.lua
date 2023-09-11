@@ -11,6 +11,7 @@ return {
         neogit = true,
         telescope = { enabled = true },
         treesitter = true,
+        which_key = true,
       },
     })
 
