@@ -6,6 +6,7 @@ return {
     require("catppuccin").setup({
       flavour = "macchiato",
       integrations = {
+        cmp = true,
         gitsigns = true,
         neogit = true,
         telescope = { enabled = true },

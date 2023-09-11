@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.o.background = "dark"
 vim.o.ignorecase = true
+vim.o.completeopt = "menuone,noselect"
 vim.o.smartcase = true
 vim.o.splitbelow = true
 vim.o.splitright = true

@@ -1,7 +1,14 @@
 local lspconfig = require("lspconfig")
 
-lspconfig.gopls.setup {}
-lspconfig.tsserver.setup {}
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
+
+local servers = { "gopls", "tsserver" }
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup({
+    capabilities = capabilities
+  })
+end
 
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
