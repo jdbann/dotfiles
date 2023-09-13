@@ -3,6 +3,7 @@ window:
     x: 12
     y: 12
   resize_increments: true
+  option_as_alt: Both
 
 font:
   normal:
