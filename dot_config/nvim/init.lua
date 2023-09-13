@@ -1,10 +1,2 @@
--- Prepare neovim
-require("bootstrap")
-require("options")
-
--- Prepare plugins
-require("lazy").setup("plugins")
-
--- Configure
-require("keybindings")
-require("lsp")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
