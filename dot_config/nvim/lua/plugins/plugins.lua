@@ -64,7 +64,7 @@ return {
   {
     "folke/edgy.nvim",
     opts = function(_, opts)
-      local function filter(tbl, func)
+      local function remove(tbl, func)
         local i = 1
         while i <= #tbl do
           if func(tbl[i]) then
@@ -75,19 +75,24 @@ return {
         end
       end
 
-      filter(opts.left, function(window)
+      remove(opts.left, function(window)
         return window.title == "Neo-Tree Git"
       end)
-      filter(opts.left, function(window)
+      remove(opts.left, function(window)
         return window.title == "Neo-Tree Buffers"
       end)
-      filter(opts.left, function(window)
+      remove(opts.left, function(window)
         return window.title == "Neotest Summary"
       end)
 
-      opts.right = {
-        { title = "Neotest Summary", ft = "neotest-summary" },
-      }
+      return vim.tbl_deep_extend("force", opts, {
+        animate = {
+          enabled = false,
+        },
+        right = {
+          { title = "Neotest Summary", ft = "neotest-summary", wo = { winfixwidth = false } },
+        },
+      })
     end,
   },
 }
