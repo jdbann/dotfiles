@@ -47,10 +47,12 @@ return {
     },
   },
 
-  { "nvim-neotest/neotest-go" },
-  { "nvim-neotest/neotest-jest" },
   {
     "nvim-neotest/neotest",
+    dependencies = {
+      { "nvim-neotest/neotest-go" },
+      { "nvim-neotest/neotest-jest" },
+    },
     opts = {
       adapters = {
         "neotest-go",
