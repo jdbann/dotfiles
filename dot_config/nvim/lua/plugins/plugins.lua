@@ -5,6 +5,10 @@ return {
       "nvim-lua/plenary.nvim",
     },
     opts = {},
+    keys = {
+      { "<leader>gg", [[<cmd>Neogit<cr>]], "n", desc = "Neogit" },
+      { "<leader>gG", [[<cmd>Neogit<cr>]], "n", desc = "Neogit" },
+    },
   },
 
   {
