@@ -16,6 +16,7 @@ brew "mas"
 brew "ripgrep"
 # Polyglot runtime manager (asdf rust clone)
 brew "rtx"
+brew "tmux"
 # The static analysis-powered Go framework for building backend applications
 brew "encoredev/tap/encore"
 # GPU-accelerated terminal emulator
