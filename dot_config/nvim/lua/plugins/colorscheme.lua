@@ -31,6 +31,7 @@ return {
         telescope = { enabled = true },
         treesitter = true,
         which_key = true,
+        window_picker = true,
       },
     },
 
