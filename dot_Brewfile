@@ -14,8 +14,8 @@ brew "neovim"
 # Mac App Store command-line interface
 brew "mas"
 brew "ripgrep"
-# Polyglot runtime manager (asdf rust clone)
-brew "rtx"
+# Polyglot tool version manager
+brew "mise"
 brew "tmux"
 # The static analysis-powered Go framework for building backend applications
 brew "encoredev/tap/encore"

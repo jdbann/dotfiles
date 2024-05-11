@@ -5,8 +5,8 @@ else if test -f /usr/local/homebrew/bin/brew
     eval (/usr/local/homebrew/bin/brew shellenv)
 end
 
-# Setup rtx
-eval "$(rtx activate fish)"
+# Setup mise
+eval "$(mise activate fish)"
 
 # Set default editors
 set -x VISUAL nvim
