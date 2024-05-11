@@ -1,3 +1,6 @@
 [tools]
 go = "latest"
 node = "lts"
+
+[settings]
+go_default_packages_file = "/Users/johnbannister/.config/mise/default-go-packages"
