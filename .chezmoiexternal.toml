@@ -1,9 +1,4 @@
 [".config/alacritty/catppuccin"]
-  type = "git-repo"
-  url = "https://github.com/catppuccin/alacritty.git"
-  refreshPeriod = "168h"
-
-[".tmux/plugins/tpm"]
-  type = "git-repo"
-  url = "https://github.com/tmux-plugins/tpm"
-  refreshPeriod = "168h"
+type = "git-repo"
+url = "https://github.com/catppuccin/alacritty.git"
+refreshPeriod = "168h"

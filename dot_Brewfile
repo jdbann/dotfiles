@@ -16,7 +16,6 @@ brew "mas"
 brew "ripgrep"
 # Polyglot tool version manager
 brew "mise"
-brew "tmux"
 # The static analysis-powered Go framework for building backend applications
 brew "encoredev/tap/encore"
 # GPU-accelerated terminal emulator
